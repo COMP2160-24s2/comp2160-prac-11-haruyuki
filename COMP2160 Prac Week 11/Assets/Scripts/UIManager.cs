@@ -38,9 +38,11 @@ public class UIManager : MonoBehaviour
 #region Events
     public delegate void TargetSelectedEventHandler(Vector3 worldPosition);
     public event TargetSelectedEventHandler TargetSelected;
-#endregion
+    #endregion
 
-#region Init & Destroy
+    Plane m_Plane;
+
+    #region Init & Destroy
     void Awake()
     {
         if (instance != null)
@@ -68,9 +70,13 @@ public class UIManager : MonoBehaviour
     {
         actions.mouse.Disable();
     }
-#endregion Init
+    private void Start()
+    {
+        m_Plane = new Plane(Vector3.up, new Vector3(0, 0.1f, 0));
+    }
+    #endregion Init
 
-#region Update
+    #region Update
     void Update()
     {
         MoveCrosshair();
@@ -79,10 +85,34 @@ public class UIManager : MonoBehaviour
 
     private void MoveCrosshair() 
     {
-        Vector2 mousePos = mouseAction.ReadValue<Vector2>();
+        // TASK 1
+        //Vector2 mousePos = mouseAction.ReadValue<Vector2>();
+        //float mouseX = mousePos.x;
+        //float mouseY = mousePos.y;
+        //Vector3 worldPos = Camera.main.ScreenToWorldPoint(new Vector3(mouseX, mouseY, 10));
+        //Vector3 crosshairPos;
+        //crosshairPos = new Vector3(worldPos.x, 0.1f, worldPos.z);
+        //crosshair.position = crosshairPos;
 
-        // FIXME: Move the crosshair position to the mouse position (in world coordinates)
-        // crosshair.position = ...;
+        // TASK 4
+        //Vector2 mousePos = mouseAction.ReadValue<Vector2>();
+        //Ray ray = Camera.main.ScreenPointToRay(mousePos);
+        //Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
+
+        //float enter = 0.0f;
+        //if (m_Plane.Raycast(ray, out enter))
+        //{
+        //    Vector3 hitPoint = ray.GetPoint(enter);
+        //    //Debug.Log(hitPoint);
+        //    crosshair.position = hitPoint;
+        //}
+
+        // TASK 5
+        //Vector2 deltaPos = deltaAction.ReadValue<Vector2>();
+        //float mouseX = deltaPos.x;
+        //float mouseY = deltaPos.y;
+
+        //crosshair.position += new Vector3(mouseX / 2, 0, mouseY / 2);
     }
 
     private void SelectTarget()

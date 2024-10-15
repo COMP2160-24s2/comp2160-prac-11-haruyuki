@@ -701,6 +701,36 @@ PrefabInstance:
       propertyPath: marble
       value: 
       objectReference: {fileID: 427451042}
+    - target: {fileID: 2427576259984822336, guid: 7547210ea5a0c40a9be0b01f003a46eb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2427576259984822336, guid: 7547210ea5a0c40a9be0b01f003a46eb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.92387956
+      objectReference: {fileID: 0}
+    - target: {fileID: 2427576259984822336, guid: 7547210ea5a0c40a9be0b01f003a46eb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.38268343
+      objectReference: {fileID: 0}
+    - target: {fileID: 2427576259984822336, guid: 7547210ea5a0c40a9be0b01f003a46eb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2427576259984822336, guid: 7547210ea5a0c40a9be0b01f003a46eb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2427576259984822336, guid: 7547210ea5a0c40a9be0b01f003a46eb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 5419573252838891429, guid: 7547210ea5a0c40a9be0b01f003a46eb,
         type: 3}
       propertyPath: m_LocalPosition.x
