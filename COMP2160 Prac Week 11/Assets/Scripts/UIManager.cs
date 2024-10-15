@@ -95,17 +95,17 @@ public class UIManager : MonoBehaviour
         //crosshair.position = crosshairPos;
 
         // TASK 4
-        //Vector2 mousePos = mouseAction.ReadValue<Vector2>();
-        //Ray ray = Camera.main.ScreenPointToRay(mousePos);
-        //Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
+        Vector2 mousePos = mouseAction.ReadValue<Vector2>();
+        Ray ray = Camera.main.ScreenPointToRay(mousePos);
+        Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
 
-        //float enter = 0.0f;
-        //if (m_Plane.Raycast(ray, out enter))
-        //{
-        //    Vector3 hitPoint = ray.GetPoint(enter);
-        //    //Debug.Log(hitPoint);
-        //    crosshair.position = hitPoint;
-        //}
+        float enter = 0.0f;
+        if (m_Plane.Raycast(ray, out enter))
+        {
+            Vector3 hitPoint = ray.GetPoint(enter);
+            //Debug.Log(hitPoint);
+            crosshair.position = hitPoint;
+        }
 
         // TASK 5
         //Vector2 deltaPos = deltaAction.ReadValue<Vector2>();
